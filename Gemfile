@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 
 gem 'bootstrap-sass'
 gem 'sprockets'
+gem 'bcrypt-ruby'
 
 group :development, :test do
   gem 'sqlite3'
