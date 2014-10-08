@@ -11,6 +11,8 @@ module ApplicationHelper
   def bootstrap_alert(key)
     if key == "error"
       "danger"
+    elsif key == 'notice'
+      'warning'
     else
       key
     end
