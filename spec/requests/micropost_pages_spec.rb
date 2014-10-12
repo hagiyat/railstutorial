@@ -36,4 +36,14 @@ RSpec.describe "MicropostPages", :type => :request do
       end
     end
   end
+
+  describe 'micropost descruction' do
+    before { FactoryGirl.create(:micropost, user: user) }
+    describe 'as correct_user' do
+      before { visit root_path }
+      it 'should delete microspots' do
+        expect { click_link 'delete' }.to change(Micropost, :count).by(-1)
+      end
+    end
+  end
 end
